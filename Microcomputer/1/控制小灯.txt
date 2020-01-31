@@ -1,0 +1,27 @@
+DATA SEGMENT
+PORTA EQU 280H 	;A口
+PORTB EQU 281H 	;B口
+PORTC EQU 282H 	;C口
+CTRL EQU 283H   	;控制口
+DATA ENDS
+
+CODE SEGMENT 
+ASSUME CS:CODE, DS:DATA
+START: 
+       MOV AX, DATA
+       MOV DS, AX  	;将段地址装入段寄存器
+       MOV AL, 90H 	;控制字10010000B,A口方式0输入,B口方式0输出
+       MOV DX,CTRL
+       OUT DX,AL     	;写入控制字
+
+TEST_IT: 
+       MOV DX,PORTA
+       IN AL,DX       	;从A口读入开关状态
+       MOV DX,PORTB
+       OUT DX,AL    	;B口输出控制灯
+       JMP TEST_IT
+
+       MOV AX,4C00H
+       INT 21H        	;返回DOS
+CODE ENDS
+END START

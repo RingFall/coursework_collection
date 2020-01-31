@@ -1,0 +1,44 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<ClassDiagram MajorVersion="1" MinorVersion="1">
+  <Class Name="多文档编辑器.FormMain" Collapsed="true">
+    <Position X="4" Y="0.5" Width="1.5" />
+    <TypeIdentifier>
+      <HashCode>BMA0DAACgeUCEksDAgCGRgAKAKCAh0CRh0QICCEAQAE=</HashCode>
+      <FileName>Form1.cs</FileName>
+    </TypeIdentifier>
+  </Class>
+  <Class Name="多文档编辑器.FormChild" Collapsed="true">
+    <Position X="0.5" Y="0.5" Width="1.5" />
+    <TypeIdentifier>
+      <HashCode>AAAQAAAAALBABAAGAACjggAKAAAAAEiABgIQEEAAAAA=</HashCode>
+      <FileName>FormChild.cs</FileName>
+    </TypeIdentifier>
+  </Class>
+  <Class Name="多文档编辑器.FormFind" Collapsed="true">
+    <Position X="2.25" Y="0.5" Width="1.5" />
+    <TypeIdentifier>
+      <HashCode>GAAIAAAIAiAAAAAABACJAAACCAAACAAABQACiAABAAA=</HashCode>
+      <FileName>FormFind.cs</FileName>
+    </TypeIdentifier>
+  </Class>
+  <Class Name="多文档编辑器.Program" Collapsed="true">
+    <Position X="0.5" Y="1.5" Width="1.5" />
+    <TypeIdentifier>
+      <HashCode>AAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAABAAAAAA=</HashCode>
+      <FileName>Program.cs</FileName>
+    </TypeIdentifier>
+  </Class>
+  <Class Name="多文档编辑器.Properties.Resources" Collapsed="true">
+    <Position X="2.25" Y="1.5" Width="1.5" />
+    <TypeIdentifier>
+      <HashCode>AAAAAAAAAAAAAAAAAAABEAAAAQAAAAAAAAAAAAAAAIA=</HashCode>
+    </TypeIdentifier>
+  </Class>
+  <Class Name="多文档编辑器.Properties.Settings" Collapsed="true">
+    <Position X="4" Y="1.5" Width="1.5" />
+    <TypeIdentifier>
+      <HashCode>AAAAAAAAAAAAAAAAAAAAIAAAAAABAAAAAAAAAAAAAAA=</HashCode>
+    </TypeIdentifier>
+  </Class>
+  <Font Name="Microsoft YaHei UI" Size="9" />
+</ClassDiagram>

@@ -1,0 +1,27 @@
+CODE SEGMENT
+ASSUME CS:CODE 
+START: 
+    MOV DX,283H    ;控制口
+    MOV AL,82H      ;控制字10000010B,A口方式0输出
+    OUT DX,AL         ;写入控制字
+    MOV AH,4         ;初始化累加器
+
+TEXT_IT:
+    ROR AH,1           ;循环右移
+    MOV DX,280H    ;A口输出
+    MOV AL,AH
+    OUT DX,AL         ;输出
+    CALL DEPLAY     ;调用延时函数
+    JMP TEXT_IT      ;循环
+
+DEPLAY PROC       ;软延时函数
+    MOV CX,16EAH
+    MOV BX,0FFH    ;双重循环延时
+    NEXT1:LOOP NEXT1
+    DEC BX
+    JNZ NEXT1 
+    RET                    ;返回
+DEPLAY ENDP 
+
+CODE ENDS
+END START

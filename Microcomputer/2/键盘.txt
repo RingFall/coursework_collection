@@ -1,0 +1,70 @@
+DATA SEGMENT
+PORT_A EQU 280H   	 ;A口
+PORT_B EQU 281H   	 ;B口
+PORT_C EQU 282H   	 ;C口
+PORT_CTL EQU 283H	 ;控制口
+
+TABLE DB 77H,7BH,7DH,7EH,0B7H,0BBH,0BDH,0BEH
+      DB 0D7H,0DBH,0DDH,0DEH,0E7H,0EBH,0EDH,0EEH						;键盘扫描码(行线列线为0其余为1)
+TABLE1 DB 3FH,06H,5BH,4FH,66H,6DH,7DH,07H,7FH,6FH,77H,7CH
+       DB 39H,5EH,79H,71H,0FFH       			    					;七段码
+DATA ENDS 
+
+CODE SEGMENT 
+ASSUME CS:CODE,DS:DATA
+START:
+	MOV AX,DATA
+	MOV DS,AX						;数据段
+	MOV DX, PORT_CTL
+	MOV AL,10000010B        		;控制字,B口输入,A、C口输出
+	OUT DX,AL						;写入控制字
+	MOV DX,PORT_A
+	MOV AL,00H
+	OUT DX,AL						;A口向所有行输出0
+	MOV DX,PORT_B					;读列,看所有键是否都松开
+WAIT_OPEN:
+	IN AL, DX						;读B口
+	AND AL, 0FH                     ;与运算取低四位(列值)
+	CMP AL,0FH                      ;是否都为1
+	JNE WAIT_OPEN              		;否,继续查
+WAIT_PRES:
+    IN AL,DX						;读B口
+    AND AL,0FH                      ;看低四位
+	CMP AL,0FH
+	JE WAIT_PRES					;都为1,无键压下,继续等待
+	MOV CX,16EAH                    ;有压下,延时消抖
+	DELAY: LOOP DELAY
+	IN AL,DX                        ;再次看键是否压下
+	AND AL,0FH
+	CMP AL,0FH
+	JE WAIT_PRES					;无键压下,重新等待
+	MOV AL,0FEH						;先使D0=0
+	MOV CL,AL 
+NEXT_ROW: 
+	MOV DX, PORT_A
+	OUT DX,AL						;向为0这位对应的行输出低电平
+	MOV DX ,PORT_B
+	IN AL,DX						;读入B口
+	AND AL,0FH
+	CMP AL,0FH                      ;看低四位列值
+	JNE ENCODE						;有0,有键压下,转到编码
+	ROL CL,01						;都为1,不是这一行,CL左移向下一个行输出0
+	MOV AL,CL
+	JMP NEXT_ROW					;再看列值
+ENCODE: 
+	MOV BX,000FH					;建立地址指针,先指向F键对应的地址
+	IN AL,DX						;从B口读入行列号
+NEXT_TRY: 
+	CMP AL,TABLE[BX]				;读入数据和表中查得值相比
+	JE DONE							;相等,跳去DONE
+	DEC BX							;不等,BX减一
+	JNS NEXT_TRY					;BX非负,继续查找
+DONE: 
+    MOV DX,PORT_C 					
+	MOV AL,TABLE1[BX]				;找出对应七段码
+	OUT DX,AL						;C口输出到显示
+	JMP WAIT_PRES					;等待下一次按键
+
+CODE ENDS
+END START 
+

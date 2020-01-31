@@ -1,0 +1,16 @@
+C:\Users\lenovo\Desktop\Puzzle\Puzzle\bin\Debug\Puzzle.exe
+C:\Users\lenovo\Desktop\Puzzle\Puzzle\bin\Debug\Puzzle.pdb
+C:\Users\lenovo\Desktop\Puzzle\Puzzle\obj\x86\Debug\Puzzle.Form1.resources
+C:\Users\lenovo\Desktop\Puzzle\Puzzle\obj\x86\Debug\Puzzle.Properties.Resources.resources
+C:\Users\lenovo\Desktop\Puzzle\Puzzle\obj\x86\Debug\Puzzle.csproj.GenerateResource.Cache
+C:\Users\lenovo\Desktop\Puzzle\Puzzle\obj\x86\Debug\Puzzle.exe
+C:\Users\lenovo\Desktop\Puzzle\Puzzle\obj\x86\Debug\Puzzle.pdb
+D:\==\C#\3_puzzle\Puzzle\Puzzle\obj\x86\Debug\Puzzle.exe
+D:\==\C#\3_puzzle\Puzzle\Puzzle\obj\x86\Debug\Puzzle.pdb
+D:\==\C#\3_puzzle\Puzzle\Puzzle\bin\Debug\Puzzle.exe
+D:\==\C#\3_puzzle\Puzzle\Puzzle\bin\Debug\Puzzle.pdb
+D:\==\C#\3_puzzle\Puzzle\Puzzle\obj\x86\Debug\Puzzle.Form1.resources
+D:\==\C#\3_puzzle\Puzzle\Puzzle\obj\x86\Debug\Puzzle.Form2.resources
+D:\==\C#\3_puzzle\Puzzle\Puzzle\obj\x86\Debug\Puzzle.Properties.Resources.resources
+D:\==\C#\3_puzzle\Puzzle\Puzzle\obj\x86\Debug\Puzzle.csproj.GenerateResource.Cache
+D:\==\C#\3_puzzle\Puzzle\Puzzle\obj\x86\Debug\Puzzle.csprojResolveAssemblyReference.cache

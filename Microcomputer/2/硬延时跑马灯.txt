@@ -1,0 +1,51 @@
+﻿CODE SEGMENT
+ASSUME CS:CODE
+START:
+	MOV AL,35H     ;控制字00110101,选择通道0,先读/写计数器低字节后高字节,使用方式2,用BCD码计数
+	MOV DX,283H    ;控制口
+	OUT DX,AL      ;输出控制字
+	MOV AL,00H     ;低字节
+	MOV DX,280H    ;通道0口
+	OUT DX,AL
+	MOV AL,10H     ;高字节
+	OUT DX,AL
+                   ;级联
+	MOV AL,77H     ;01110111,选择通道1,先读/写计数器低字节后高字节,使用方式3,用BCD码计数
+	MOV DX,283H    
+	OUT DX,AL
+	MOV AL,00H
+	MOV DX,281H    ;通道1口
+	OUT DX,AL
+	MOV AL,05H
+	OUT DX,AL
+
+	MOV DX,29BH    ;8255控制口
+	MOV AL,92H     ;控制字10010010,A口方式0输入,C口输出
+	OUT DX,AL
+	MOV BL,01H     ;初始化
+LIGHT1:
+	MOV DX,298H    ;A口输入
+	IN AL,DX
+	AND AX,01H     ;和00000001与保留最低位
+	CMP AL,01H     ;比较最低位
+	JZ DOWN	       ;高电平不亮
+	MOV DX,29AH    ;低电平时C口输出
+	MOV AL,BL
+	OUT DX,AL      ;输出
+	ROL BL,1       ;循环左移存在BL中
+ON:
+	MOV DX,298H    ;A口输入
+	IN AL,DX
+	AND AX,01H     
+	CMP AL,01H     ;比较最低位是否为1
+	JNZ ON        ;最低位为0(低电平)->一直亮同个灯(循环DAD)
+DOWN:
+	MOV DX,298H    ;A口输入
+	IN AL,DX
+	AND AX,01H
+	CMP AL,0H      ;比较最低位是否为0
+	JNZ DOWN        ;最低位为1->等待再次为0(循环DDD)
+	JMP LIGHT1     ;最低位为0时跳到LIGHT1
+
+CODE ENDS
+END START

@@ -1,0 +1,15 @@
+C:\Users\lenovo\Desktop\WindowsFormsApplication2\WindowsFormsApplication2\bin\Debug\WindowsFormsApplication2.exe
+C:\Users\lenovo\Desktop\WindowsFormsApplication2\WindowsFormsApplication2\bin\Debug\WindowsFormsApplication2.pdb
+C:\Users\lenovo\Desktop\WindowsFormsApplication2\WindowsFormsApplication2\obj\x86\Debug\WindowsFormsApplication2.Form1.resources
+C:\Users\lenovo\Desktop\WindowsFormsApplication2\WindowsFormsApplication2\obj\x86\Debug\WindowsFormsApplication2.Properties.Resources.resources
+C:\Users\lenovo\Desktop\WindowsFormsApplication2\WindowsFormsApplication2\obj\x86\Debug\WindowsFormsApplication2.csproj.GenerateResource.Cache
+C:\Users\lenovo\Desktop\WindowsFormsApplication2\WindowsFormsApplication2\obj\x86\Debug\WindowsFormsApplication2.exe
+C:\Users\lenovo\Desktop\WindowsFormsApplication2\WindowsFormsApplication2\obj\x86\Debug\WindowsFormsApplication2.pdb
+D:\==\C#\1_calculator\骆信智_08163337_实验一\扩展-贷款计算器\WindowsFormsApplication2\obj\x86\Debug\WindowsFormsApplication2.exe
+D:\==\C#\1_calculator\骆信智_08163337_实验一\扩展-贷款计算器\WindowsFormsApplication2\obj\x86\Debug\WindowsFormsApplication2.pdb
+D:\==\C#\1_calculator\骆信智_08163337_实验一\扩展-贷款计算器\WindowsFormsApplication2\bin\Debug\WindowsFormsApplication2.exe
+D:\==\C#\1_calculator\骆信智_08163337_实验一\扩展-贷款计算器\WindowsFormsApplication2\bin\Debug\WindowsFormsApplication2.pdb
+D:\==\C#\1_calculator\骆信智_08163337_实验一\扩展-贷款计算器\WindowsFormsApplication2\obj\x86\Debug\WindowsFormsApplication2.csprojResolveAssemblyReference.cache
+D:\==\C#\1_calculator\骆信智_08163337_实验一\扩展-贷款计算器\WindowsFormsApplication2\obj\x86\Debug\WindowsFormsApplication2.Form1.resources
+D:\==\C#\1_calculator\骆信智_08163337_实验一\扩展-贷款计算器\WindowsFormsApplication2\obj\x86\Debug\WindowsFormsApplication2.Properties.Resources.resources
+D:\==\C#\1_calculator\骆信智_08163337_实验一\扩展-贷款计算器\WindowsFormsApplication2\obj\x86\Debug\WindowsFormsApplication2.csproj.GenerateResource.Cache

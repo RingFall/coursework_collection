@@ -1,0 +1,43 @@
+<?xml version="1.0" encoding="utf-8"?>
+<studentcontact>
+  <student studentid="1">
+    <name>2333</name>
+    <sex>男</sex>
+    <age>1</age>
+    <birthdate>2017- 12- 28</birthdate>
+    <phone>1</phone>
+    <homeaddress>1</homeaddress>
+    <email>1</email>
+    <profession>1</profession>
+  </student>
+  <student studentid="2">
+    <name>1</name>
+    <sex>男</sex>
+    <age>1</age>
+    <birthdate>2017-12-28</birthdate>
+    <phone>1</phone>
+    <homeaddress>1</homeaddress>
+    <email>1</email>
+    <profession>信息安全</profession>
+  </student>
+  <student studentid="3">
+    <name>3</name>
+    <sex>女</sex>
+    <age>3</age>
+    <birthdate>2017-12-28</birthdate>
+    <phone>3</phone>
+    <homeaddress>3</homeaddress>
+    <email>3</email>
+    <profession>计算机科学与技术</profession>
+  </student>
+  <student studentid="4">
+    <name>a</name>
+    <sex>女</sex>
+    <age>0</age>
+    <birthdate>2018-01-11</birthdate>
+    <phone>1111111111111</phone>
+    <homeaddress>earth</homeaddress>
+    <email>111@qq.com</email>
+    <profession>信息安全</profession>
+  </student>
+</studentcontact>
